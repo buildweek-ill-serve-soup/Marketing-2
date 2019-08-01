@@ -94,6 +94,16 @@ h5 {
   font-size: 0.9rem;
   font-weight: lighter;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.navigation button:hover {
+  background-color: #8DBD53;
+  color: white;
+}
+.navigation button:active {
+  background-color: #8DBD53;
+  color: white;
+  transform: translate(0, 2px);
 }
 .banner button, .lower-banner button {
   width: 12rem;
@@ -106,7 +116,18 @@ h5 {
   font-weight: bolder;
   letter-spacing: 3px;
   box-shadow: 2px 2px black;
+  cursor: pointer;
 }
+.banner button:hover, .lower-banner button:hover {
+  background-color: white;
+  color: #8DBD53;
+}
+.banner button:active, .lower-banner button:active {
+  background-color: white;
+  color: #8DBD53;
+  transform: translate(0, 2px);
+}
+
 
 /* navigation*/
 
