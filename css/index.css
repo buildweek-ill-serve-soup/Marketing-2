@@ -138,11 +138,14 @@ h5 {
 .navigation h2 {
   color: #8DBD53;
 }
-@media (max-width: 800px) {
-
-}
-@media (max-width: 500px) {
-
+@media (max-width: 850px) {
+  .navigation {
+  flex-direction: column;
+  justify-content: space-around;
+  }
+  .navigation div {
+    display: none;
+  }
 }
 
 /* banner */
@@ -154,11 +157,33 @@ h5 {
   color: white;
   text-shadow: 1px 1px black;
   position: absolute;
-  transform: translate(10%, -400px);
-  width: 50%;
+  transform: translate(10%, -160%);
 }
 .banner button {
   margin: 50px 0 0 100px;
+}
+@media (max-width: 850px) {
+  .banner-text {
+  transform: translate(0, -10%);
+  color: black;
+  background-color: white;
+  width: 80%;
+  margin: 0 10%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
+  text-shadow: none;
+  }
+  .banner-text h1 {
+    font-size: 2.4rem;
+  }
+  .banner-text h2 {
+    font-size: 1.2rem;
+  }
+  .banner button {
+    margin: 30px auto;
+
+  }
 }
 
 /* highlight box */
@@ -179,14 +204,36 @@ h5 {
   border-radius: 5px;
   margin-right: 20px;
 }
-.highlight-box h2, p {
-  margin: 10px 40px 10px 0;
+.highlight-box div p {
+  margin: 10px 0 0 -60px;
 }
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
+  .highlight-box {
+    width: 100%;
+    margin: 30px auto;
+    padding-top: 30px;
+    border-top: 1px solid lightgrey;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: translate(0,250px);
+  }
 }
-@media (max-width: 500px) {
-
+@media (max-width: 600px) {
+  .highlight-box img {
+    display: none;
+  }
+  .highlight-box h3, .highlight-box div p{
+    text-align: center;
+  }
+  .highlight-box h3 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  .highlight-box div p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
 }
 
 /* description section 1 */
@@ -195,7 +242,7 @@ h5 {
   font-size: 2.4rem;
 }
 .desc-one {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -204,11 +251,46 @@ h5 {
 .desc-one h2, p {
   padding: 0 60px;
 }
-@media (max-width: 800px) {
-
+.description .desc-one img {
+  width: 50%;
+  margin-right: 40px;
 }
-@media (max-width: 500px) {
-
+@media (max-width: 850px) {
+  .description {
+    transform: translate(0, 300px);
+  }
+  .desc-one {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .description .desc-one h2 {
+    font-size: 1.8rem;
+  }
+  .description .desc-one img {
+    width: 40%;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .desc-one {
+    flex-direction: column-reverse;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .description .desc-one img {
+    width: 70%;
+    margin: -20px 0 20px 0;
+  }
+  .description .desc-one h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .description .desc-one p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 /* description section 2 */
@@ -219,21 +301,26 @@ h5 {
   margin: 10px 0;
 }
 .desc-two {
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding: 0 60px;
 }
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
+  .desc-two {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
-@media (max-width: 500px) {
-
+@media (max-width: 600px) {
+  .desc-two {
+    display: none;
+  }
 }
 
 /* description section 3 */
 
 .desc-three {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
@@ -246,11 +333,26 @@ h5 {
 .desc-three h2 {
   margin-left: 60px;
 }
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
+  .desc-three {
+    width: 100%;
+  }
+  .description .desc-three h2 {
+    margin: 0 30px;
+    font-size: 1.8rem;
+  }
+  .description .desc-three p {
+    margin: 10px 0 0 -30px;
+    font-size: 1rem;
+  }
+  .description .desc-three img {
+    width: 40%;
+  }
 }
-@media (max-width: 500px) {
-
+@media (max-width: 600px) {
+  .desc-three {
+    display: none;
+  }
 }
 
 /* lower banner */
@@ -266,7 +368,7 @@ h5 {
   margin-top: 50px;
 }
 .lower-banner div {
-  transform: translate(15%, -400px);
+  transform: translate(15%, -350px);
   color: white;
 }
 .lower-banner h1 {
@@ -279,11 +381,57 @@ h5 {
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px black;
 }
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
+  .lower-banner {
+    transform: translate(0, 300px);
+  }
+  .lower-banner h5 {
+    font-size: 2rem;
+    height: 100px;
+    padding: 30px 0 0 15%;
+  }
+  .lower-banner div {
+    transform: translate(0, -225px);
+    text-align: center;
+  }
+  .lower-banner h1 {
+    font-size: 2.6rem;
+  }
+  .lower-banner p {
+    font-size: 1.4rem;
+    margin: 0 auto;
+  }
+  .lower-banner button {
+    margin: 15px auto;
+    width: 350px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
 }
-@media (max-width: 500px) {
-
+@media (max-width: 600px) {
+  .lower-banner h5 {
+    font-size: 1.5rem;
+    height: 90px;
+    padding: 30px;
+    text-align: center;
+  }
+  .lower-banner div {
+    transform: translate(0, -160px);
+    text-align: center;
+  }
+  .lower-banner h1 {
+    font-size: 2.4rem;
+  }
+  .lower-banner p {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .lower-banner button {
+    margin: 15px auto;
+    width: 250px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
 
 /* footer 1 */
@@ -315,11 +463,30 @@ h5 {
   margin: 0 auto;
   justify-content: space-around;
 }
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
+  .site-links {
+    transform: translate(0, 300px);
+    padding: 20px 10px;
+    height: 200px;
+  }
+  site-links h4 {
+    font-size: 1.4rem;
+  }
+  .site-links h2 {
+    font-size: 1.2rem;
+  }
+  .site-links a {
+    font-size: 1rem;
+  }
 }
-@media (max-width: 500px) {
-
+@media (max-width: 600px) {
+  .site-links {
+    flex-wrap: wrap;
+    height: 400px;
+  }
+  .site-links div {
+    margin: 20px;
+  }
 }
 
 /* footer 2 */
@@ -338,4 +505,19 @@ h5 {
 }
 .legal-footer .legal-links {
   display: flex;
+}
+@media (max-width: 850px) {
+  .legal-footer {
+    transform: translate(0, 300px);
+  }
+}
+@media (max-width: 600px) {
+  .legal-footer {
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+  }
+  .legal-footer a {
+    margin: 5px 10px;
+  }
 }
